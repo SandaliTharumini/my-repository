@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industry 4.0</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212; /* Dark background */
+            color: #E0E0E0; /* Primary text color */
+        }
+        .header {
+            padding: 20px;
+            background-color: #1E1E1E;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header h1 {
+            color: #BB86FC; /* Accent color */
+            margin: 0;
+        }
+        .header button {
+            background-color: #BB86FC; /* Accent color */
+            color: #121212;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .header button:hover {
+            background-color: #9b6de2;
+        }
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .tabs button {
+            background-color: #1E1E1E;
+            color: #E0E0E0;
+            border: none;
+            padding: 14px 20px;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            transition: border-bottom 0.3s;
+        }
+        .tabs button:hover {
+            border-bottom: 2px solid #BB86FC;
+        }
+        .tabs button.active {
+            border-bottom: 2px solid #BB86FC;
+        }
+        .tab-content {
+            display: none;
+            padding: 20px;
+            background-color: #1E1E1E;
+            margin: 20px;
+            border-radius: 8px;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #B0B0B0; /* Secondary text color */
+            text-align: center;
+            padding: 10px 20px;
+            border-top: 1px solid #333333; /* Border color */
+        }
+        a {
+            color: #BB86FC; /* Accent color */
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Industry 4.0</h1>
+        <button onclick="location.href='login.html'">Login</button>
+    </div>
+
+    <div class="tabs">
+        <button class="tab-link active" onclick="openTab(event, 'home')">Home</button>
+        <button class="tab-link" onclick="openTab(event, 'features')">Features</button>
+        <button class="tab-link" onclick="openTab(event, 'contact')">Contact</button>
+    </div>
+
+    <div id="home" class="tab-content active">
+        <h2>Welcome to Industry 4.0</h2>
+        <p>Industry 4.0 represents the fourth industrial revolution, characterized by the integration of digital technologies, automation, and data exchange in manufacturing and production environments. It encompasses various technologies such as the Internet of Things (IoT), artificial intelligence (AI), and advanced robotics.</p>
+    </div>
+
+    <div id="features" class="tab-content">
+        <h2>Core Components</h2>
+        <ul>
+            <li>Internet of Things (IoT)</li>
+            <li>Artificial Intelligence (AI) and Machine Learning</li>
+            <li>Big Data and Analytics</li>
+            <li>Advanced Robotics</li>
+            <li>Augmented Reality (AR) and Virtual Reality (VR)</li>
+            <li>Cyber-Physical Systems</li>
+            <li>Cloud Computing</li>
+        </ul>
+    </div>
+
+    <div id="contact" class="tab-content">
+        <h2>Contact Us</h2>
+        <p>For more information, please visit our <a href="https://example.com">website</a> or contact us at info@example.com.</p>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Industry 4.0 Insights. All rights reserved.</p>
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                tabcontent[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tab-link");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            document.getElementById(tabName).style.display = "block";
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+</body>
+</html>
