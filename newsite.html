@@ -9,8 +9,8 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #121212; /* Dark background */
-            color: #E0E0E0; /* Primary text color */
+            background-color: #121212; 
+            color: #E0E0E0; 
         }
         .header {
             padding: 20px;
@@ -20,11 +20,11 @@
             align-items: center;
         }
         .header h1 {
-            color: #BB86FC; /* Accent color */
+            color: #BB86FC; 
             margin: 0;
         }
         .header button {
-            background-color: #BB86FC; /* Accent color */
+            background-color: #BB86FC; 
             color: #121212;
             border: none;
             padding: 10px 20px;
@@ -110,10 +110,37 @@
             <li>Cloud Computing</li>
         </ul>
     </div>
+    <div id="news" class="tab-content">
+    <h2>News</h2>
+    <div class="news-article">
+        <h3>Advancements in IoT Technology Revolutionize Manufacturing</h3>
+        <p>Discover how the latest innovations in Internet of Things (IoT) technology are reshaping the manufacturing industry, from predictive maintenance to smart supply chain management.</p>
+        <a href="#">Read More</a>
+    </div>
+    <div class="news-article">
+        <h3>AI-Powered Analytics Driving Business Growth in the Digital Age</h3>
+        <p>Explore how artificial intelligence (AI) is transforming data analytics, empowering businesses to unlock valuable insights, optimize operations, and drive sustainable growth in today's digital landscape.</p>
+        <a href="#">Read More</a>
+    </div>
+    </div>
 
     <div id="contact" class="tab-content">
         <h2>Contact Us</h2>
-        <p>For more information, please visit our <a href="https://example.com">website</a> or contact us at info@example.com.</p>
+        <p>Have questions or want to get in touch with us? Feel free to reach out!</p>
+        <div class="contact-form">
+        <form action="contact.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+        
     </div>
 
     <div class="footer">
